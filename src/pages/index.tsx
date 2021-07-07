@@ -27,7 +27,7 @@ export default function Home() {
           </h2>
 
           <button className="btn">
-            <Link href="/create-invite"> RECEBER CONVITE</Link>
+            <Link href="/create-invite">RECEBER CONVITE</Link>
           </button>
         </div>
 
@@ -47,13 +47,18 @@ export default function Home() {
 
             <div className={styles.card}>
               <p className="tag">Localização</p>
-              <a className={styles.call} href="callto:+244991293139">
+              <a
+                className={styles.call}
+                href="https://www.google.com/maps/dir//-8.970683,13.240191/@-8.9706791,13.2398813,106m/data=!3m1!1e3"
+              >
                 Condomínio <br />
                 parque das <br />
                 Acácias
               </a>
-              <a href="callto:+244991293139" className="btn-sm">
-                {' '}
+              <a
+                href="https://www.google.com/maps/dir//-8.970683,13.240191/@-8.9706791,13.2398813,106m/data=!3m1!1e3"
+                className="btn-sm"
+              >
                 Obter direção{' '}
               </a>
             </div>
