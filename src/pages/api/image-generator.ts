@@ -182,6 +182,10 @@ body {
   border-bottom: 2px dashed #333;
 }
 
+.ticket-event img {
+  width: 440px;
+}
+
     </style>
   </head>
   <body>
@@ -199,10 +203,8 @@ body {
             <div class="ticket-profile_text">
               <p class="ticket-profile_name">${name}</p>
               <p class="ticket-profile_username">
-                <span class="ticket-profile_githubIcon">
-                  🥳 
-                </span>
-               Estás oficialmente convidado para a festa do Leorick!
+                
+               Utilize essa foto/convite para poder entrar.
               </p>
             </div>
           </div>
@@ -227,7 +229,7 @@ body {
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const isHTMLDebugMode = false
   const html = getHTML({
-    name: req.query.name || 'Adicione na URL: /?name=Titulo'
+    name: req.query.name || 'Adicione o seu nome'
   })
 
   if (isHTMLDebugMode) {
@@ -235,7 +237,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     return res.end(html)
   }
 
-  const file = await getScreenshot(html, { width: 100, height: 100 })
+  const file = await getScreenshot(html)
 
   res.setHeader('Content-Type', 'image/png')
   res.end(file)
