@@ -1,10 +1,27 @@
-import { useState } from 'react'
+import emailjs from 'emailjs-com'
 import Head from 'next/head'
 import Link from 'next/link'
+import { useState } from 'react'
 import styles from '../styles/CreateInvite.module.css'
 
 export default function CreateInvite() {
   const [name, setName] = useState('')
+
+  function sendEmail(e) {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        'service_2bym1ig',
+        'template_ioij15c',
+        e.target,
+        'user_Hng6TkzfrUFCVB5AyBNlE'
+      )
+      .then(res => {
+        console.log(res)
+      })
+      .catch(err => console.log(err))
+  }
 
   return (
     <div className="container">
@@ -13,20 +30,23 @@ export default function CreateInvite() {
       </Head>
 
       <main className={styles.main}>
-        <h2>Gerar o Convite:</h2>
+        <h2>Gerar o Convite: </h2>
 
-        <input
-          type="text"
-          placeholder="Primeiro e Último nome"
-          onChange={event => setName(event.target.value)}
-          className={styles.input}
-        />
+        <form onSubmit={sendEmail}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Primeiro e Último nome"
+            onChange={event => setName(event.target.value)}
+            className={styles.input}
+          />
 
-        <button className="btn">
-          <Link href={`/api/image-generator?name=${name}`}>
-            Gerar o Convite
-          </Link>
-        </button>
+          <button type="submit" className="btn">
+            <Link href={`/api/image-generator?name=${name}`}>
+              Gerar o Convite
+            </Link>
+          </button>
+        </form>
       </main>
     </div>
   )
