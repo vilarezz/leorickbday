@@ -196,7 +196,7 @@ body {
         <div class="ticket-visual_profile">
           <div class="ticket-profile_profile">
             <img
-              src="https://github.com/vilarezz/leorick/blob/main/public/logo.svg"
+              src="https://github.com/vilarezz/leorickbday/blob/main/public/logo.png"
               alt="Usuário Não encontrado"
               class="ticket-profile_image"
             />
