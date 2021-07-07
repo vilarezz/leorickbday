@@ -136,6 +136,10 @@ body {
   flex-direction: row;
 }
 
+.ticket-profile_profile img {
+  width: 100px;
+}
+
 .ticket-event {
   margin-top: 25px;
   margin-left: -10px;
@@ -196,7 +200,7 @@ body {
         <div class="ticket-visual_profile">
           <div class="ticket-profile_profile">
             <img
-              src="https://github.com/vilarezz/leorickbday/blob/main/public/logo.png"
+              src="https://github.com/vilarezz/leorickbday/blob/main/public/approved.png?raw=true"
               alt="Usuário Não encontrado"
               class="ticket-profile_image"
             />
