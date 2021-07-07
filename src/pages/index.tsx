@@ -11,7 +11,7 @@ export default function Home() {
 
       <header className={styles.header}>
         <img src="/logo.png" className={styles.logo} alt="" />
-        <img src="/date.png" className={styles.date} alt="" />
+        <img src="/date.svg" className={styles.date} alt="" />
       </header>
 
       <main className={styles.main}>
