@@ -1,13 +1,16 @@
 import emailjs from 'emailjs-com'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { useState } from 'react'
+import { FormEvent, useState } from 'react'
 import styles from '../styles/CreateInvite.module.css'
 
 export default function CreateInvite() {
   const [name, setName] = useState('')
 
-  function sendEmail(e) {
+  const router = useRouter()
+
+  function sendEmail(e: any) {
     e.preventDefault()
 
     emailjs
@@ -17,10 +20,18 @@ export default function CreateInvite() {
         e.target,
         'user_Hng6TkzfrUFCVB5AyBNlE'
       )
-      .then(res => {
-        console.log(res)
-      })
-      .catch(err => console.log(err))
+      .then(
+        result => {
+          console.log(result.text)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
+    e.target.reset()
+    alert('email sent!')
+
+    router.push(`/api/image-generator?name=${name}`)
   }
 
   return (
@@ -42,9 +53,9 @@ export default function CreateInvite() {
           />
 
           <button type="submit" className="btn">
-            <Link href={`/api/image-generator?name=${name}`}>
-              Gerar o Convite
-            </Link>
+            {/* <Link href={`/api/image-generator?name=${name}`}> */}
+            Gerar o Convite
+            {/* </Link> */}
           </button>
         </form>
       </main>
