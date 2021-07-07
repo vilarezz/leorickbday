@@ -1,0 +1,76 @@
+:root {
+  --text: #eeeeee;
+  --highlight: #ffee00;
+  --dark: #010720;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  width: 100vw;
+  background: linear-gradient(173.2deg, #010720 4.07%, #000000 95.91%) no-repeat;
+  font-size: 16px;
+  color: var(--text);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  padding: 1rem 2rem;
+
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.9;
+  transition: all 200ms;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+.btn {
+  color: var(--text);
+  background: linear-gradient(45.2deg, #030836 4.07%, #120336 95.91%);
+  box-shadow: 0px 0px 45px -20px rgba(255, 255, 255, 0.25);
+
+  padding: 1rem 1.2rem;
+  border-radius: 0.24rem;
+}
+
+.btn-sm {
+  color: var(--text);
+  background: linear-gradient(45.2deg, #030836 4.07%, #120336 95.91%);
+  box-shadow: 0px 0px 45px -20px rgba(255, 255, 255, 0.25);
+
+  font-size: 0.6rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.24rem;
+
+  margin-top: 0.3rem;
+}
