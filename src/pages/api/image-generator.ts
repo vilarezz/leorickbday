@@ -181,6 +181,7 @@ body {
   width: calc(320px - 10px);
   border-bottom: 2px dashed #333;
 }
+
     </style>
   </head>
   <body>
@@ -206,7 +207,7 @@ body {
             </div>
           </div>
           <div class="ticket-event">
-            <img src="https://github.com/omariosouto.png" />
+            <img src="https://github.com/vilarezz/leorickbday/blob/main/public/ticket.png?raw=true" />
           </div>
         </div>
         <div class="ticket-visual_ticket-number-wrapper">
